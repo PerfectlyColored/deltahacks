@@ -30,8 +30,8 @@ const Nav = () => {
           <Link href="/"> CareLink</Link>
           </li>
         <li>
-          <Link className={!profComplete ? 'disabled' : ''} href="/report">
-            Report
+          <Link href="/">
+            Home
           </Link>
         </li>
         <li>
