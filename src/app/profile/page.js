@@ -6,7 +6,7 @@ import { Grenze } from "next/font/google";
 export default function Page() {
     
     const [success,setSuccess] = useState("0");
-    let p;
+    let p = {};
     if (typeof window !== 'undefined') {
         p = JSON.parse(localStorage.getItem('profile'));
     }
