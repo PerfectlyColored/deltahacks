@@ -8,7 +8,10 @@ export default function Page() {
     const [success,setSuccess] = useState("0");
     let p = {};
     if (typeof window !== 'undefined') {
-        p = JSON.parse(localStorage.getItem('profile'));
+        let parsed = JSON.parse(localStorage.getItem('profile'));
+        if (parsed !== null) { 
+            p = parsed;
+        }
     }
     
     function handleSubmit(e) {
