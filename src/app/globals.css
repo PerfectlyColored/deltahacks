@@ -58,9 +58,11 @@ h1 {
   font-weight: 300;
   /* background: rgb(210 227 255)
   linear-gradient(180deg, rgb(210 227 255) 0%, rgb(223 231 255) 18%, rgb(200 212 255) 100%) */
-  background-image: url("https://th.bing.com/th/id/R.132bff7fa3966f4552d8db981ddf6cf5?rik=2SWMFReRuuFmBA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fCr2viQw.jpg&ehk=kkY5lV%2bPb8rCBZi4P20%2b93sXBPm0MOcLlxfjfQxa5QE%3d&risl=&pid=ImgRaw&r=0"), linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8));
+  background-image: url("https://wallpapercave.com/wp/H8QYQjv.jpg"), linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8));
   background-blend-mode: overlay;
+  background-size: cover;
 }
+
 * {
   font-family: 'Montserrat', sans-serif;
 }
@@ -272,6 +274,7 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2em;
 }
 
 .profile input {
