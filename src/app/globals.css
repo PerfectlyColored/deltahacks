@@ -52,7 +52,7 @@ h1 {
   cursor: pointer; 
   border: 1px solid var(--dark);;
 }
-.home, .checkin, .resources, .profile{
+.home, .checkin, .resources, .profile, .report{
   color: var(--dark);
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -66,10 +66,11 @@ h1 {
   margin-bottom: 2em;
   margin-top: 1em;
 }
-.home {
+.home, .report {
   display: flex;
   min-height: 100vh;
   align-items: center;
+  padding-bottom: 2em;
   flex-direction: column;
 }
 

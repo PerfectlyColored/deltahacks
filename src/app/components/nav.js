@@ -5,6 +5,8 @@ import { useState } from 'react';
 const Nav = () => {
 
     const [ profComplete, setProfComplete] = useState(true);
+    
+    const [ reportComplete, setReportComplete] = useState(true);
     useEffect(() => {
       let p = JSON.parse(localStorage.getItem('profile'));
       if (p) {
@@ -12,9 +14,15 @@ const Nav = () => {
       } else {
         setProfComplete(false);
       }
+
+
+      let r = localStorage.getItem('report');
+      if (r) {
+        setReportComplete(true);
+      } else {
+        setReportComplete(false);
+      }
     }, []);
-    
-  
     return (
     <div className="navDiv">
       <ul className="nav">
@@ -30,8 +38,8 @@ const Nav = () => {
           <Link href="/"> CareLink</Link>
           </li>
         <li>
-          <Link href="/">
-            Home
+          <Link className={!reportComplete ? 'disabled' : ''} href="/report">
+            Report
           </Link>
         </li>
         <li>

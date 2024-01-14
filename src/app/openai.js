@@ -30,7 +30,6 @@ export default async function gpt() {
 
   
 
-\nDate: [Current Date]\n 
 
   
 
@@ -135,8 +134,8 @@ if (typeof window !== 'undefined') {
     p = JSON.parse(localStorage.getItem('profile'));
     
 }
-
-const question = `\nfill out the template exactly like how it's given from the above sample patient report but also output the results exactly like the template, use all the same - "dashes" and symbols?`;
+//exactly like how it's given from the above sample patient report but also output the results exactly like the template
+const question = `\nFill out the template by using the above sample patient report and replacing whatever's inside the square brackets, use all the same - "dashes" and symbols?`;
 
 const newSymptoms = checkinAnswers[0];
 const rating = checkinAnswers[1];
@@ -168,6 +167,10 @@ const completion = await openai.chat.completions.create({
       // output the bot response from the the completion component and store it in the ApiResponse state
       let message = completion.choices[0].message.content;
       console.log(message);
+      if (typeof window !== 'undefined') {
+        console.log("setting localstorage report");
+        localStorage.setItem('report',message);
+    }
       sendEmail(message);
     } catch (e) {
       console.log(e);
