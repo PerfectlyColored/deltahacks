@@ -3,6 +3,7 @@ import { redirect } from "next/dist/server/api-utils";
 import Nav from "../components/nav"
 import QCard from "../components/QCard"
 import { useState } from "react"
+import gpt from "../openai";
 export default function Page() {
     
     const [ index, setIndex ] = useState(0);
@@ -29,7 +30,7 @@ export default function Page() {
         let answers = JSON.parse(localStorage.getItem('checkin'));
         console.log(answers);
     }
-    
+        gpt();
         setqcardDisp("none");
         setDisplay("1");
    }

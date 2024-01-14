@@ -1,5 +1,4 @@
 import { useState } from "react";
-import gpt from "../openai";
 import { useEffect } from "react";
 const QCard = ({ title, content, save, next, end, re, def }) => {
 
@@ -16,7 +15,6 @@ const QCard = ({ title, content, save, next, end, re, def }) => {
         setCont(defaultResponses[index]);
         if (end) {
             console.log("sending email");
-            gpt();
             re();
         }
     }

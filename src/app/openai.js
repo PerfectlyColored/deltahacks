@@ -133,7 +133,7 @@ let p = {};
 if (typeof window !== 'undefined') {
     checkinAnswers = JSON.parse(localStorage.getItem('checkin'));
     p = JSON.parse(localStorage.getItem('profile'));
-       
+    
 }
 
 const question = `\nfill out the template exactly like how it's given from the above sample patient report but also output the results exactly like the template, use all the same - "dashes" and symbols?`;
