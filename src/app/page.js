@@ -6,18 +6,26 @@ import { useEffect } from 'react';
 import Nav from './components/nav';
 import Medtracker from './components/Medtracker';
 import gpt from './openai';
+import { useState } from 'react';
 export default function Home() {
+  const [ profComplete, setProfComplete] = useState(true);
 useEffect(() => {
-  const item = localStorage.getItem('checkin')
-  console.log(item);
+  let p = JSON.parse(localStorage.getItem('profile'));
+  if (p) {
+    setProfComplete(true);
+  } else {
+    setProfComplete(false);
+  }
 }, []);
 
   return (
     <div className="home">
       
     <Nav></Nav>
-
-    <div className="panels">
+    {
+      !profComplete && <h1>You must complete your profile!</h1>
+    }
+     <div className="panels">
       <Medtracker></Medtracker>
       <div className="righthomepanel">
         <div className="panel">

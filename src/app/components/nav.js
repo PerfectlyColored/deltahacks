@@ -1,6 +1,19 @@
 import Link from 'next/link';
-
+import { useEffect } from 'react';
+import { useState } from 'react';
 const Nav = () => {
+
+    const [ profComplete, setProfComplete] = useState(true);
+    useEffect(() => {
+      let p = JSON.parse(localStorage.getItem('profile'));
+      if (p) {
+        setProfComplete(true);
+      } else {
+        setProfComplete(false);
+      }
+    }, []);
+    
+  
     return (
     <div className="navDiv">
       <ul className="nav">
@@ -16,12 +29,12 @@ const Nav = () => {
           <Link href="/"> CareLink</Link>
           </li>
         <li>
-          <Link href="/report">
+          <Link className={!profComplete ? 'disabled' : ''} href="/report">
             Report
           </Link>
         </li>
         <li>
-          <Link href="checkin">
+          <Link className={!profComplete ? 'disabled' : ''} href="checkin">
             Daily Check-in
           </Link>
         </li>
