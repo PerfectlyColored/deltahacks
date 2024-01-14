@@ -1,4 +1,4 @@
-import Med from "./Med";
+import Takenmed from "./Takenmed";
 
 const Medstaken = ({ untakeMeds, medsArr }) => {
 
@@ -7,7 +7,7 @@ const Medstaken = ({ untakeMeds, medsArr }) => {
         {
             medsArr.map((obj, i) => {
                 return(
-                <Med moveMeds={untakeMeds} key={i} name={`${obj.name}`}></Med>    
+                <Takenmed moveMeds={untakeMeds} desc={`${obj.desc}`} key={i} name={`${obj.name}`}></Takenmed>    
                 );
             })
         }

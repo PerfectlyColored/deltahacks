@@ -40,65 +40,67 @@ export default function Page() {
             <h1>Create Your Profile</h1>
             <br></br>
 
-            <h3>Basic Information</h3>
-            <br></br>
-            <ul className="questions"> 
-           <li>
-           <p>Full Name</p>
-            <input type="text" defaultValue={p.name} name="name" />   
-            </li>     
+<div className="formGroups">
+    <div>
+    <h3>Basic Information</h3>
+                <br></br>
+                <ul className="questions"> 
             <li>
-            <p>Date of Birth</p>
-            <input type="text" defaultValue={p.birth}name="birth" />
-            </li>
-            <li>
-            <p>Gender</p>
-            <input type="text" defaultValue={p.gender}name="gender" />
-            </li>
-            <li>
-            <p>Email</p>
-            <input type="text" defaultValue={p.email}name="email" />
-            </li>
-            <li>
-            <p>Phone Number</p>
-            <input type="text" defaultValue={p.phone}name="phone" />
-            </li>
-            <li>
-            <p>Address</p>
-            <input type="text" defaultValue={p.address}name="address" />
-            </li>
-            <li>
-            <p>PSW Contact Info</p>
-            <input type="text" defaultValue={p.PSW}name="PSW" />
-            </li>
-            <li>
-            <p>Nurse Contact Info</p>
-            <input type="text" defaultValue={p.nurse}name="nurse" />
-            </li>
-            </ul>
-            
-
-            <br></br>
-            <h3>Medical History</h3>
-            <br></br>
-
-            <ul className="questions">
+            <p>Full Name</p>
+                <input type="text" defaultValue={p.name} name="name" />   
+                </li>     
                 <li>
-                <p>Medical Conditions</p>
-                <input type="text" defaultValue={p.conditions}name="conditions" />
+                <p>Date of Birth</p>
+                <input type="text" defaultValue={p.birth}name="birth" />
                 </li>
                 <li>
-                <p>Previous Surgeries or Hospitalizations</p>
-                <input type="text" defaultValue={p.previous}name="previous" />
+                <p>Gender</p>
+                <input type="text" defaultValue={p.gender}name="gender" />
                 </li>
                 <li>
-                <p>Allergies</p>
-                <input type="text" defaultValue={p.allergies}name="allergies" />
+                <p>Email</p>
+                <input type="text" defaultValue={p.email}name="email" />
                 </li>
-            </ul>
+                <li>
+                <p>Phone Number</p>
+                <input type="text" defaultValue={p.phone}name="phone" />
+                </li>
+                <li>
+                <p>Address</p>
+                <input type="text" defaultValue={p.address}name="address" />
+                </li>
+                <li>
+                <p>PSW Contact Info</p>
+                <input type="text" defaultValue={p.PSW}name="PSW" />
+                </li>
+                <li>
+                <p>Nurse Contact Info</p>
+                <input type="text" defaultValue={p.nurse}name="nurse" />
+                </li>
+                </ul>
+    </div>
+    <div>
+    <h3>Medical History</h3>
+                <br></br>
 
-            <br></br>
-            <h3>Medical History</h3>
+                <ul className="questions">
+                    <li>
+                    <p>Medical Conditions</p>
+                    <input type="text" defaultValue={p.conditions}name="conditions" />
+                    </li>
+                    <li>
+                    <p>Previous Surgeries or Hospitalizations</p>
+                    <input type="text" defaultValue={p.previous}name="previous" />
+                    </li>
+                    <li>
+                    <p>Allergies</p>
+                    <input type="text" defaultValue={p.allergies}name="allergies" />
+                    </li>
+                </ul>
+
+    </div>
+    <div>
+    <h3>Medical History</h3>
             <br></br>
 
             <ul className="questions">
@@ -111,9 +113,11 @@ export default function Page() {
                 <input type="text" defaultValue={p.dosages}name="dosages" />
                 </li>
             </ul>
+    </div>
 
-            <br></br>
-            <h3>Family Medical History</h3>
+    <div></div>
+    <div>
+    <h3>Family Medical History</h3>
             <br></br>
 
             <ul className="questions">
@@ -123,8 +127,9 @@ export default function Page() {
                 </li>
             </ul>
             
-            <br></br>
-            <h3>Social History</h3>
+    </div>
+    <div>
+    <h3>Social History</h3>
             <br></br>
 
             <ul className="questions">
@@ -143,9 +148,9 @@ export default function Page() {
                 <input type="text" defaultValue={p.drug}name="drug" />
                 </li>
             </ul>
-
-            <br></br>
-            <h3>Lifestyle Factors</h3>
+    </div>
+    <div>
+    <h3>Lifestyle Factors</h3>
             <br></br>
 
             <ul className="questions">
@@ -165,7 +170,22 @@ export default function Page() {
                 </li>
             </ul>
 
-            <button style={{marginTop: "1em"}}className="btn" onSubmit={handleSubmit}>Save</button>
+    </div>
+</div>
+         
+            
+
+           
+       
+            
+
+         
+     
+           
+
+         
+           
+            <button style={{marginTop: "1em"}}className="save btn" onSubmit={handleSubmit}>Save</button>
             <p style={{ transition: "1s", color: "green", fontWeight: "bold",padding: "1em 0em", opacity: `${success}`}}>Successfully saved</p>
         </div>
         </form>

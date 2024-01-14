@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Rammetto+One&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+*/
 /* Replit code*/
 html {
   height: 100%;
@@ -33,8 +37,8 @@ h1 {
   padding: 1em;
   
 }
-
 .nav  a {
+  font-size: 1.2em;
   padding: 0.5em 1em;
   text-decoration: none;
   color: var(--dark);
@@ -55,8 +59,12 @@ h1 {
   background: rgb(210 227 255)
   linear-gradient(180deg, rgb(210 227 255) 0%, rgb(223 231 255) 18%, rgb(200 212 255) 100%)
 }
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 .navDiv {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
+  margin-top: 1em;
 }
 .home {
   display: flex;
@@ -77,8 +85,12 @@ h1 {
   color: black;
   max-width: 30em;
 }
+.medtracker.panel {
+  max-width: 50em;
+}
 .panels {
   padding: 1rem;
+  width: 100%;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -109,16 +121,28 @@ h1 {
   flex: 0 0 100%;
   border-radius: 0.5em;
   transition: 1s;
-  background-color: #91b1ec;
+  background-color: #4930b7;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+ 
   border: 1px solid transparent;
 }
-.meds.medstaken > li {
-  opacity: 0.5;
-  background-color: rgba(139, 223, 171, 1);
+.meds > li h1 {
+  color: white;
 }
+.medName {
+  display: flex;
+  align-items: flex-start;
+flex-direction: column;
+}
+.meds.medstaken > li {
+  opacity: 1;
+  background-color: rgb(138, 210, 121);
+}
+
 .meds > li:hover {
   cursor: pointer;
-  background-color: #6a8fd2;
+  opacity: 0.8;
   border: 1px solid #213a68;
 }
 .meds.medstaken > li:hover {
@@ -140,15 +164,22 @@ h1 {
   font-weight: 500;
   border: none;
   text-decoration: none;
-  background-color: #91b1ec;
-  color: black;
+  background-color: #3f6ec4;
+  color: white;
   transition: 1s;
   display: block;
 }
-
+.help.btn {
+  width: 100%;
+  font-size: 1.8em;
+  background-color: #3f6ec4;
+  text-align: center;
+  max-width: 40em;
+}
 .btn:hover {
   cursor: pointer;
-  background-color: #6a8fd2;
+  background-color: #6e95dd;
+  color: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
  
 }
@@ -160,10 +191,10 @@ h1 {
   width: 50vw;
   margin: auto;
 }
-.logo {
+.logo a {
   font-weight: 700;
-  font-size: 1.3em;
-
+  font-size: 1.5em;
+  font-family: 'Rammetto One', sans-serif;
 }
 
 
@@ -256,4 +287,23 @@ h1 {
 .disabled {
   opacity: 0.2;
   pointer-events: none;
+}
+.formGroups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  
+  
+}
+.profile h1 {
+  text-align: center;
+}
+.profile .panel {
+  max-width: 45em;
+  
+}
+
+.save.btn {
+  font-family: 'Montserrat';
+  font-size: 1.5em;
 }

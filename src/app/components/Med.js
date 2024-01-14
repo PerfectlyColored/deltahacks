@@ -1,13 +1,14 @@
-const Med = ({ color, moveMeds, name}) => {
+const Med = ({ color, desc, moveMeds, name}) => {
 
    return (
         <li className="medName" onClick={()=> {
             console.log(name);
-            moveMeds(`${name}`);
+            moveMeds(name,desc);
         }}>
-            <a >
+            <h1 >
             {name}
-        </a>
+        </h1>
+        <p>{desc}</p>
         </li>
     
     )

@@ -7,7 +7,7 @@ const Meds = ({ takeMeds, medsArr }) => {
         {
             medsArr.map((obj, i) => {
                 return(
-                <Med moveMeds={takeMeds} key={i} name={`${obj.name}`}></Med>    
+                <Med moveMeds={takeMeds} key={i} desc={`${obj.desc}`}name={`${obj.name}`}></Med>    
                 );
             })
         }

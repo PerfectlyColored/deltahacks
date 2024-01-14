@@ -32,14 +32,9 @@ useEffect(() => {
           <h1>Did you complete your daily check-in?</h1>
           <a className="btn" href="/checkin">Complete check-in now</a>
         </div>
-        <div className="panel">
-          <h1>PSW Contact Info</h1>
-          <a className="btn" href="/">Get Help</a>
-        </div>
-        <div className="panel">
-          <h1>History</h1>
-          <p>These past few days, you've been feeling</p>
-        </div>
+          <a className="help btn" href="/resources">Get Emergency Help</a>
+        
+      
       </div>
 
     </div>
